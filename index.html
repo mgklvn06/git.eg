@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Display Date and Time</title>
-    <script>
-        function displayDateTime() {
-            const now = new Date();
-            document.getElementById('dateTime').innerText = now.toLocaleString();
-        }
-        window.onload = displayDateTime;
-    </script>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .dark-mode {
+        background-color: black;
+        color: white;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-    <h1>Welcome to My Page</h1>
-    <p>The current date and time is: <span id="dateTime"></span></p>
+<h1>Dark Mode Toggle Example</h1>
+<p>Click the button below to toggle dark mode.</p>
+<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+    }
+</script>
 </body>
 </html>
