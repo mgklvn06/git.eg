@@ -15,5 +15,24 @@
 <body>
     <h1>Welcome to My Page</h1>
     <p>The current date and time is: <span id="dateTime"></span></p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Date and Time</title>
+    <script>
+        function displayDateTime() {
+            const now = new Date();
+            document.getElementById('dateTime').innerText = now.toLocaleString();
+        }
+        window.onload = displayDateTime;
+    </script>
+</head>
+<body>
+    <h1>Welcome to My Page</h1>
+    <p>The current date and time is: <span id="dateTime"></span></p>
+</body>
+</html>
 </body>
 </html>
